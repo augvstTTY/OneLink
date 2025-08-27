@@ -1,3 +1,4 @@
+// src/main.js
 // Anime.js animation for buttons
 document.addEventListener('DOMContentLoaded', () => {
     anime({
