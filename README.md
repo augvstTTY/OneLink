@@ -1,6 +1,6 @@
 # Augvst.TTY OneLink
 
-A minimalist, Apple-inspired portfolio page showcasing Augusto Lúe Morales' professional and creative presence. This Linktree-style site connects visitors to social and professional platforms with a clean, responsive design, featuring subtle animations and a light/dark mode toggle.
+A minimalist, Apple-inspired LinkBio page showcasing Augusto Lúe Morales' professional and creative presence. This Linktree-style site connects visitors to social and professional platforms with a clean, responsive design, featuring subtle animations and a light/dark mode toggle.
 
 ## Features
 - **Elegant Design**: Inspired by Apple’s aesthetic with a liquid-glass effect, Roboto typography, and smooth transitions.
@@ -28,7 +28,6 @@ A minimalist, Apple-inspired portfolio page showcasing Augusto Lúe Morales' pro
 - `src/main.js`: JavaScript for button animations (Anime.js) and mode toggle.
 - `src/media/`: Assets for profile image and favicon.
 
-## Contributing
-This is a personal portfolio project. For suggestions or improvements, contact Augusto Lúe Morales via [LinkedIn](https://linkedin.com).
+
 
 
