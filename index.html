@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Augvst.TTY - Computer Science & Mechatronics Engineering Portfolio</title>
+    <title>Augvst.TTY - OneLink</title>
     <meta name="description" content="Augusto Lúe Morales - BSc in Computer Science and Mechatronics Engineering student. Explore my projects, photography portfolio and connect on social media.">
     <meta name="keywords" content="Augusto Lúe Morales, Augvst.TTY, Computer Science, Mechatronics Engineering, portfolio, developer, programmer, photography, LinkedIn, GitHub, Threads, Instagram">
     <meta name="author" content="Augusto Lúe Morales">
@@ -11,36 +11,17 @@
     <meta name="theme-color" content="#0071e3">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://augvst.tty/">
-    <meta property="og:title" content="Augvst.TTY - Portfolio">
-    <meta property="og:description" content="BSc in Computer Science and Mechatronics Engineering student. Explore my projects and connect with me.">
-    <meta property="og:image" content="https://augvst.tty/images/social-preview.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://augvst.tty/">
-    <meta property="twitter:title" content="Augvst.TTY - Portfolio">
-    <meta property="twitter:description" content="BSc in Computer Science and Mechatronics Engineering student. Explore my projects and connect with me.">
-    <meta property="twitter:image" content="https://augvst.tty/images/social-preview.jpg">
+    <link rel="icon" href="src/media/profileyellow.png">
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" as="script">
     
-    <!-- Preload the critical image -->
-    <link rel="preload" href="src/media/profile.png" as="image">
-    
-    <!-- Inline critical CSS -->
+    <!-- Critical CSS Inlined -->
     <style>
-        /* Critical CSS inlined for above-the-fold content */
         :root {
             --bg-color: #f5f5f7;
             --text-color: #1d1d1f;
@@ -53,7 +34,6 @@
             --toggle-icon: #1d1d1f;
             --footer-border: rgba(0, 0, 0, 0.06);
             --radius: 14px;
-            --transition-time: 0.8s;
         }
 
         .dark-mode {
@@ -73,16 +53,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: background-color var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1), 
-                        color var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1),
-                        box-shadow var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1),
-                        border-color var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1),
-                        opacity var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1),
-                        transform var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
             background: var(--bg-color);
             color: var(--text-color);
             min-height: 100vh;
@@ -91,6 +65,8 @@
             align-items: center;
             padding: 20px;
             line-height: 1.6;
+            transition: background-color 0.8s cubic-bezier(0.19, 1, 0.22, 1), 
+                        color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         .container {
@@ -107,6 +83,7 @@
             box-shadow: var(--shadow);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         .profile-img {
@@ -117,11 +94,12 @@
             margin-bottom: 24px;
             box-shadow: var(--shadow);
             border: 3px solid var(--card-bg);
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         h1 {
-            font-size: 2.8rem;
-            font-weight: bol;
+            font-size: 2.4rem;
+            font-weight: 700;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
             color: var(--text-color);
@@ -168,8 +146,7 @@
             font-weight: 500;
             box-shadow: var(--shadow);
             border: 1px solid rgba(255, 255, 255, 0.12);
-            opacity: 0;
-            transform: translateY(-20px);
+            transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         .button:hover {
@@ -196,6 +173,7 @@
             justify-content: center;
             cursor: pointer;
             box-shadow: var(--shadow);
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         .toggle-button:hover {
@@ -216,6 +194,12 @@
             color: var(--text-color);
             opacity: 0.7;
             text-align: center;
+        }
+
+        /* Initially hidden for animations */
+        .button {
+            opacity: 0;
+            transform: translateY(-20px);
         }
 
         @media (max-width: 500px) {
@@ -245,14 +229,13 @@
                 padding: 14px 16px;
             }
         }
-
-        /* System font stack as fallback while Roboto loads */
-        .fonts-loaded body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
     </style>
+
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'; this.onload=null;">
     
-    <!-- Noscript fallback for users without JavaScript -->
+    <!-- Noscript fallback -->
     <noscript>
         <style>
             .button {
@@ -260,6 +243,8 @@
                 transform: none !important;
             }
         </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     </noscript>
 </head>
 <body>
@@ -267,10 +252,10 @@
         <button class="toggle-button" aria-label="Toggle light/dark mode" onclick="toggleMode()">
             <i class="fas fa-moon"></i>
         </button>
-        <img src="src/media/profile.png" alt="Augvst.TTY profile photo - Computer Science and Mechatronics Engineering student" class="profile-img" width="120" height="120">
+        <img src="src/media/profileyellow.png" alt="Augvst.TTY profile photo - Computer Science and Mechatronics Engineering student" class="profile-img" width="120" height="120" loading="eager">
         <h1>Augvst.TTY</h1>
         <p class="subtitle">BSc Computer Science · Mechatronics Engineering</p>
-        <p class="quote">"Life's most persistent and urgent question is, 'What are you doing for others?'" - MLK · RUNR 🏃🏻</p>
+        <p class="quote">💭 Life's most persistent and urgent question is, 'What are you doing for others? - MLK · RUNR 🏃🏻</p>
         <ul class="buttons">
             <li><a href="https://www.threads.com/@augvst.tty" class="button" aria-label="Visit my Threads profile for daily thoughts"><i class="fab fa-threads"></i> My daily thoughts</a></li>
             <li><a href="https://open.spotify.com/playlist/2d35jYWAkhAn9nxez9LlrA?si=lPn0F-AAT4a4PJTwFXDPBQ" class="button" aria-label="Listen to my Spotify playlist"><i class="fab fa-spotify"></i> Listen to my playlist</a></li>
@@ -289,7 +274,7 @@
         "name": "Augusto Lúe Morales",
         "alternateName": "Augvst.TTY",
         "url": "https://augvst.tty",
-        "image": "src/media/profile.png",
+        "image": "src/media/profileyellow.png",
         "jobTitle": "Computer Science and Mechatronics Engineering Student",
         "description": "BSc in Computer Science and Mechatronics Engineering student. Explore my projects and connect with me.",
         "sameAs": [
@@ -301,105 +286,30 @@
     }
     </script>
 
-    <!-- Load non-critical resources asynchronously -->
+    <!-- Load JS with correct priorities -->
     <script>
-        // Function to load CSS asynchronously
-        function loadCSS(href, before, media) {
-            var ss = window.document.createElement("link");
-            var ref = before || window.document.getElementsByTagName("script")[0];
-            ss.rel = "stylesheet";
-            ss.href = href;
-            ss.media = "only x";
-            ref.parentNode.insertBefore(ss, ref);
-            setTimeout(function() { ss.media = media || "all"; });
-            return ss;
-        }
-        
-        // Load non-critical CSS
-        if (typeof loadCSS !== "undefined") {
-            loadCSS("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
-            loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
-        }
-        
-        // Load AnimeJS asynchronously
-        window.addEventListener('load', function() {
-            var script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js';
-            script.async = true;
-            document.head.appendChild(script);
-            
-            // Apply fonts-loaded class when Roboto is available
-            setTimeout(function() {
-                document.documentElement.classList.add('fonts-loaded');
-            }, 200);
-        });
+        // Immediately apply saved theme to prevent flash
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    const icon = document.querySelector('.toggle-button i');
+                    if (icon) {
+                        icon.classList.replace('fa-moon', 'fa-sun');
+                    }
+                }
+            } catch (e) {
+                console.log('Error loading theme preference:', e);
+            }
+        })();
     </script>
 
-    <!-- Main JavaScript functionality -->
-    <script>
-        // Anime.js animation for buttons
-        document.addEventListener('DOMContentLoaded', () => {
-            // Check if anime is loaded, if not, use fallback
-            if (typeof anime !== 'undefined') {
-                anime({
-                    targets: '.button',
-                    translateY: [-20, 0],
-                    opacity: [0, 1],
-                    delay: anime.stagger(100, { start: 200 }),
-                    duration: 800,
-                    easing: 'easeOutQuad'
-                });
-            } else {
-                // Fallback if anime.js doesn't load
-                document.querySelectorAll('.button').forEach(function(button, index) {
-                    setTimeout(function() {
-                        button.style.opacity = '1';
-                        button.style.transform = 'translateY(0)';
-                    }, 200 + (index * 100));
-                });
-            }
-        });
-
-        // Smooth mode transition
-        function toggleMode() {
-            // Prevent rapid toggling during transition
-            if (document.documentElement.classList.contains('transitioning')) return;
-            
-            document.documentElement.classList.add('transitioning');
-            
-            document.body.classList.toggle('dark-mode');
-            const icon = document.querySelector('.toggle-button i');
-            
-            // Smooth icon transition
-            if (document.body.classList.contains('dark-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'light');
-            }
-            
-            // Add subtle rotation to icon
-            icon.style.transform = 'rotate(360deg)';
-            setTimeout(() => {
-                icon.style.transform = 'rotate(0deg)';
-            }, 800);
-            
-            setTimeout(() => {
-                document.documentElement.classList.remove('transitioning');
-            }, 800);
-        }
-
-        // Apply saved theme on load
-        window.addEventListener('load', () => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.querySelector('.toggle-button i').classList.replace('fa-moon', 'fa-sun');
-            }
-        });
-    </script>
+    <!-- Load AnimeJS with high priority but non-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" as="script" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" async></script>
+    
+    <!-- Main JS functionality - loaded with defer -->
+    <script src="src/js/main.js" defer></script>
 </body>
 </html>
