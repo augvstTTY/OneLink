@@ -3,236 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AugvstMorales</title>
-<meta name="description" content="Portfolio de Augvst Morales: Ingeniería, código y diseño unidos en soluciones escalables y elegantes.">
-<meta name="keywords" content="Augvst Morales, portfolio, backend, sistemas escalables, streaming algorithms, data engineering, minimalismo, tecnología, MIT style">
+<title>AugvstMorales | Backend Engineer & Systems Architect</title>
+<meta name="description" content="Augvst Morales - Backend engineer specializing in scalable systems, streaming algorithms, and data engineering. Exploring computer science principles through real-world engineering.">
+<meta name="keywords" content="Augvst Morales, backend engineer, systems architect, streaming algorithms, data engineering, scalable systems, computer science, software engineer">
 <meta name="author" content="Augvst Morales">
-<meta property="og:title" content="Augvst Morales – The Art of Scalable Simplicity">
-<meta property="og:description" content="Ingeniería y elegancia técnica en equilibrio.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://augvstmorales.com">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="AugvstMorales – Backend Engineer & Systems Architect">
+<meta property="og:description" content="Driven by curiosity — exploring how computer science principles shape real engineering work. Building scalable systems and sharing discoveries.">
 <meta property="og:image" content="Media/avatartion.webp">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://augvstmorales.com">
+<meta property="og:site_name" content="AugvstMorales Portfolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AugvstMorales – Backend Engineer & Systems Architect">
+<meta name="twitter:description" content="Building scalable systems. Exploring computer science principles through real engineering work.">
+<meta name="twitter:image" content="Media/avatartion.webp">
+
+<!-- Favicon -->
 <link rel="icon" type="image/webp" href="Media/avatartion.webp">
+<link rel="apple-touch-icon" href="Media/avatartion.webp">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://kit.fontawesome.com">
+<link rel="preconnect" href="https://raw.githubusercontent.com">
+
+<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/fc8a02832e.js" crossorigin="anonymous"></script>
-<style>
-:root {
-  --light-bg: #ffffff;
-  --light-text: #000;
-  --dark-bg: #000;
-  --dark-text: #fff;
-  --accent: #04ff00;
-  --glass-bg-light: rgba(0,0,0,0.8);
-  --glass-bg-dark: rgba(45,45,50,0.85);
-  --glass-border: rgba(255,255,255,0.1);
-  --transition: all 1s ease-in-out;
-}
-[data-theme="dark"] {
-  --system-bg: var(--dark-bg);
-  --system-text: var(--dark-text);
-  --glass-bg: var(--glass-bg-dark);
-}
-[data-theme="light"] {
-  --system-bg: var(--light-bg);
-  --system-text: var(--light-text);
-  --glass-bg: var(--glass-bg-light);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  font-family:'Inter',system-ui,sans-serif;
-  background:var(--system-bg);
-  color:var(--system-text);
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  transition:background-color 1s ease-in-out, color 1s ease-in-out;
-}
 
-/* ===== Dynamic Island ===== */
-.dynamic-island{
-  position:fixed;
-  top:1.25rem;left:50%;
-  transform:translateX(-50%);
-  display:flex;align-items:center;gap:.75rem;
-  background:var(--glass-bg);
-  backdrop-filter:blur(20px)saturate(180%);
-  border:1px solid var(--glass-border);
-  border-radius:2.5rem;
-  padding:.5rem .75rem;
-  height:3rem;
-  transition:var(--transition);
-  color:#fff;
-  z-index:1000;
-}
-.dynamic-island.compact{width:6.5rem;}
-.dynamic-island.expanded{width:18rem;}
+<!-- Stylesheet -->
+<link rel="stylesheet" href="Css/main.css">
 
-/* Avatar */
-.island-avatar{
-  width:2rem;height:2rem;
-  border-radius:50%;
-  background:url("Media/avatartion.webp") center/cover no-repeat;
-  flex-shrink:0;
-  transition:var(--transition);
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Augvst Morales",
+  "jobTitle": "Backend Engineer",
+  "description": "Backend engineer specializing in scalable systems and data engineering",
+  "url": "https://augvstmorales.com",
+  "sameAs": [
+    "https://github.com/augvstTTY",
+    "https://www.linkedin.com/in/augvstmorales",
+    "https://www.threads.net/@augvst.tty"
+  ]
 }
-.dynamic-island.expanded .island-avatar{width:2.25rem;height:2.25rem;}
-
-/* Content */
-.island-content{
-  opacity:0;
-  transform:translateX(-10px);
-  transition:var(--transition);
-  white-space:nowrap;
-  overflow:hidden;
-  flex:1;min-width:0;
-}
-.dynamic-island.expanded .island-content{
-  opacity:1;transform:translateX(0);
-}
-.island-text{font-size:.9rem;font-weight:600;line-height:1.2;}
-.island-subtext{font-size:.75rem;opacity:.8;}
-
-/* Toggle */
-.theme-toggle{
-  background:none;border:none;color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;
-  border-radius:50%;
-  padding:.4rem;
-  transition:background .3s, transform .3s;
-}
-.theme-toggle:hover{
-  background:rgba(255,255,255,.15);
-  transform:scale(1.1);
-}
-.theme-toggle i{
-  font-size:1.3rem;
-  transition:opacity .4s ease, transform .4s ease;
-}
-.theme-toggle .fa-toggle-on{display:none;}
-[data-theme="light"] .fa-toggle-off{display:none;}
-[data-theme="light"] .fa-toggle-on{display:block;}
-
-/* ===== Main Content ===== */
-main{
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:6.2rem 1rem 5rem; /* reducido sutilmente */
-  transition:var(--transition);
-}
-.container{
-  max-width:900px;
-  width:100%;
-  margin:0 auto;
-}
-.github-snake{
-  width:100%;
-  margin-bottom:2rem;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 1.5s ease forwards;
-}
-.hero{
-  opacity:0;
-  transform:translateY(40px);
-  animation:fadeUp 1.5s ease .2s forwards;
-}
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px);}
-  to{opacity:1;transform:translateY(0);}
-}
-.hero h1{
-  font-size:clamp(2.5rem,5vw,4rem);
-  background:linear-gradient(135deg,var(--system-text),#888);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:1rem;
-  transition:var(--transition);
-}
-.hero p{font-size:1.25rem;color:#8e8e93;}
-
-/* ===== Apple-inspired Button ===== */
-.cv-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:.6rem;
-  margin-top:2.2rem;
-  padding:1rem 2.5rem;
-  font-size:1.3rem;
-  font-weight:600;
-  color:var(--system-bg);
-  background:linear-gradient(135deg,#04ff00,#00c853);
-  border:none;
-  border-radius:2rem;
-  cursor:pointer;
-  position:relative;
-  overflow:hidden;
-  transition:all .35s cubic-bezier(0.4,0,0.2,1);
-  box-shadow:0 8px 30px rgba(0,0,0,0.25);
-  perspective:1000px;
-}
-.cv-button i{
-  font-size:1.3rem;
-  transition:transform .4s ease;
-}
-.cv-button::before{
-  content:"";
-  position:absolute;
-  top:0;left:-75%;
-  width:50%;height:100%;
-  background:linear-gradient(120deg,rgba(255,255,255,0.6),rgba(255,255,255,0));
-  transform:skewX(-25deg);
-  transition:left .6s ease;
-}
-.cv-button:hover::before{left:125%;}
-.cv-button:hover{
-  transform:translateY(-4px) scale(1.05) rotateX(6deg);
-  box-shadow:0 12px 35px rgba(0,255,0,0.3);
-}
-.cv-button:active{
-  transform:translateY(1px) scale(0.98);
-  box-shadow:0 5px 15px rgba(0,255,0,0.15);
-}
-.cv-button:hover i{transform:translateX(4px);}
-
-/* ===== Footer Dock ===== */
-footer{
-  position:fixed;
-  bottom:.75rem;left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:1.5rem;
-  padding:.7rem 1.2rem;
-  background:rgba(255,255,255,0.1);
-  backdrop-filter:blur(20px)saturate(180%);
-  border:1px solid var(--glass-border);
-  border-radius:2.5rem;
-  z-index:999;
-  transition:var(--transition);
-}
-footer a{
-  text-decoration:none;
-  color:var(--system-text);
-  font-size:1.8rem;
-  display:flex;align-items:center;justify-content:center;
-  width:3.4rem;height:3.4rem;
-  border-radius:1rem;
-  transition:transform .25s ease, color .4s ease;
-}
-footer a:hover{
-  transform:translateY(-6px) scale(1.15);
-  color:var(--accent);
-}
-
-/* ===== Responsive ===== */
-@media(max-width:600px){
-  .dynamic-island.expanded{width:16rem;}
-  footer{gap:1rem;padding:.6rem 1rem;}
-  footer a{font-size:1.5rem;width:2.8rem;height:2.8rem;}
-}
-</style>
+</script>
 </head>
 <body>
   <!-- Dynamic Island -->
@@ -252,74 +73,37 @@ footer a:hover{
   <main>
     <div class="container">
       <img src="https://raw.githubusercontent.com/augvstTTY/augvstTTY/main/github-snake-dark.svg" 
-           alt="GitHub Snake animation" class="github-snake" loading="lazy">
+           alt="GitHub contribution snake animation" class="github-snake" loading="lazy">
       <section class="hero">
         <h1>Learning, building, daring — the only way to create lasting change 🌱</h1>
         <p>
-	  Driven by curiosity — exploring how strong computer science principles can shape real engineering work.
-	  I’m still learning, building, and refining my craft — and I share what I discover along the way.
+          Driven by curiosity — exploring how strong computer science principles can shape real engineering work.
+          I'm still learning, building, and refining my craft — and I share what I discover along the way.
         </p>
-        <!---  <button class="cv-button" onclick="window.open('','_blank')" aria-label="Open GitHub">
-          Explore the Craft &nbsp; <i class="fa-regular fa-newspaper"></i>
-        </button> --->
       </section>
     </div>
   </main>
 
   <!-- Footer Dock -->
   <footer>
-    <a href="https://www.threads.net/@augvst.tty" title="Threads"><i class="fa-brands fa-threads"></i></a>
-    <a href="https://www.linkedin.com/in/augvstmorales" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://open.spotify.com/playlist/2d35jYWAkhAn9nxez9LlrA?si=WtkNjpv4SC28QU4fRTODlg" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
-    <a href="" title="X"><i class="fa-brands fa-square-x-twitter"></i></a>
-    <a href="https://github.com/augvstTTY" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.threads.net/@augvst.tty" title="Threads" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-threads"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/augvstmorales" title="LinkedIn" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://open.spotify.com/playlist/2d35jYWAkhAn9nxez9LlrA?si=WtkNjpv4SC28QU4fRTODlg" title="Spotify" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-spotify"></i>
+    </a>
+    <a href="" title="X" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-square-x-twitter"></i>
+    </a>
+    <a href="https://github.com/augvstTTY" title="GitHub" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
   </footer>
 
-<script>
-const html=document.documentElement;
-const island=document.getElementById('island');
-const btn=document.getElementById('themeBtn');
-
-const saved=localStorage.getItem('theme')||
-(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
-html.dataset.theme=saved;
-
-btn.onclick=()=>{
-  const dark=html.dataset.theme==='dark';
-  html.dataset.theme=dark?'light':'dark';
-  localStorage.setItem('theme',dark?'light':'dark');
-};
-
-// Dynamic island behavior
-let expanded=false,timeout;
-const expand=()=>{
-  if(expanded)return;
-  island.classList.replace('compact','expanded');
-  expanded=true;
-  clearTimeout(timeout);
-};
-const compact=()=>{
-  if(!expanded)return;
-  clearTimeout(timeout);
-  timeout=setTimeout(()=>{
-    island.classList.replace('expanded','compact');
-    expanded=false;
-  },3000);
-};
-island.addEventListener('mouseenter',expand);
-island.addEventListener('mouseleave',compact);
-island.addEventListener('touchstart',expand);
-
-// Subtle tilt
-island.addEventListener('mousemove',e=>{
-  const r=island.getBoundingClientRect();
-  const x=(e.clientX-r.left)/r.width-.5;
-  const y=(e.clientY-r.top)/r.height-.5;
-  island.style.transform=`translateX(-50%) rotateY(${x*4}deg) rotateX(${y*-4}deg)`;
-});
-island.addEventListener('mouseleave',()=>island.style.transform='translateX(-50%)');
-
-setTimeout(()=>{expand();compact();},1000);
-</script>
+  <!-- JavaScript -->
+  <script src="JS/main.js"></script>
 </body>
 </html>
