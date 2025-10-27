@@ -317,4 +317,47 @@ footer a:hover {
 }
 
 
-/**F1**/
+/* ===== Snake Animation ===== */
+.snake-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.snake-animation {
+  max-width: 100%;
+  width: clamp(280px, 60vw, 600px);
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.snake-animation:hover {
+  transform: scale(1.03);
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .snake-container {
+    margin-top: 1.5rem;
+  }
+
+  .snake-animation {
+    width: 90%;
+  }
+}
+
+.end{
+  font-size: 26px;
+  color: #FF1801;
+  text-shadow: 
+    0.3px 0.3px 0 black,
+    -0.3px -0.3px 0 black,
+    0.3px -0.3px 0 black,
+    -0.3px 0.3px 0 black;
+}
+
+.space{
+  padding: 0.5em;
+}
